@@ -102,3 +102,8 @@ SELECT student_name FROM students
 SELECT course_name, count(course_id) as students_enrolled FROM enrollment
     JOIN courses USING(course_id)
     GROUP BY course_name;
+
+
+-- Query 7:
+SELECT avg(age) as average_age FROM students;
+
