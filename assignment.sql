@@ -66,3 +66,10 @@ SELECT * FROM enrollment;
 -- Query 1: Insert a new student record.
 INSERT INTO students (student_name, age, email, frontend_mark, backend_mark, status) VALUES
     ('Anamul Haque', 21, 'anamul@gmail.com', 60, 58, NULL)
+
+
+-- Query 2: 
+SELECT student_name FROM enrollment
+    JOIN students USING(student_id)
+    JOIN courses USING(course_id)
+    WHERE course_name = 'React.js'
