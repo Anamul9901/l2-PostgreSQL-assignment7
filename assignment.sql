@@ -92,3 +92,7 @@ UPDATE students
 DELETE FROM courses
     WHERE course_id NOT IN (SELECT course_id from enrollment);
 
+
+-- Query 5:
+SELECT student_name FROM students
+    LIMIT 2 OFFSET 2;
