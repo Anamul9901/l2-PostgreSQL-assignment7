@@ -107,3 +107,7 @@ SELECT course_name, count(course_id) as students_enrolled FROM enrollment
 -- Query 7:
 SELECT avg(age) as average_age FROM students;
 
+
+-- Query 8:
+SELECT student_name FROM students
+    WHERE email LIKE '%example.com';
