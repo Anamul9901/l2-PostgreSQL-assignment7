@@ -81,3 +81,14 @@ UPDATE students
     SET status = 'Awarded'
     WHERE (frontend_mark + frontend_mark) = (SELECT max(frontend_mark + frontend_mark) FROM students);
      
+
+-- Query 4:
+
+-- SELECT course_id from enrollment;
+
+-- SELECT course_name FROM courses
+--     WHERE course_id NOT IN (SELECT course_id FROM enrollment);
+    
+DELETE FROM courses
+    WHERE course_id NOT IN (SELECT course_id from enrollment);
+
