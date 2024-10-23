@@ -96,3 +96,9 @@ DELETE FROM courses
 -- Query 5:
 SELECT student_name FROM students
     LIMIT 2 OFFSET 2;
+
+
+-- Query 6:
+SELECT course_name, count(course_id) as students_enrolled FROM enrollment
+    JOIN courses USING(course_id)
+    GROUP BY course_name;
