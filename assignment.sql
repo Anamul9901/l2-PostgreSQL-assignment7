@@ -58,6 +58,7 @@ INSERT INTO enrollment (student_id, course_id) VALUES
     (2, 1),
     (3, 2)
 
+DROP table enrollment; 
 SELECT * FROM enrollment;
 
 
@@ -73,3 +74,10 @@ SELECT student_name FROM enrollment
     JOIN students USING(student_id)
     JOIN courses USING(course_id)
     WHERE course_name = 'React.js'
+
+
+-- Query 3:
+UPDATE students
+    SET status = 'Awarded'
+    WHERE (frontend_mark + frontend_mark) = (SELECT max(frontend_mark + frontend_mark) FROM students);
+     
